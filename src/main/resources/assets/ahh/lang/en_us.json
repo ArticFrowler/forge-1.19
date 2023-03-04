@@ -1,0 +1,26 @@
+{
+    "item.ahh.zircon": "Zircon",
+    "item.ahh.raw_zircon": "Raw Zircon",
+    "item.ahh.eight_ball": "Eight Ball of Counting",
+    "item.ahh.blueberry_seeds": "Blueberry Seeds",
+    "item.ahh.blueberries": "Blueberries",
+    "item.ahh.soap_water_bucket": "Soap Water Bucket",
+
+    "block.ahh.zircon_block": "Zircon Block",
+    "block.ahh.zircon_ore": "Zircon Ore",
+    "block.ahh.nether_zircon_ore": "Nether Zircon Ore",
+    "block.ahh.end_zircon_ore": "End Zircon Ore",
+    "block.ahh.deepslate_zircon_ore": "Deepslate Zircon Ore",
+    "block.ahh.jumpy_block": "A Bouncy Block",
+    "block.ahh.zircon_lamp": "Zircon Lamp",
+    "block.ahh.blueberry_crop": "Blueberry Crop",
+
+    "itemGroup.ahhtab": "Ahh Mod",
+    "entity.minecraft.villager.ahh.jump_master": "Jumpy Master",
+
+    "key.catagory.aahmod.aah": "Ahh Mod",
+    "key.ahh.drink_water": "Drink Water",
+
+    "message.ahh.drink_water": "Drinking water",
+    "message.ahh.no_water": "No water nearby!"
+}

@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "lit=true": {"model": "ahh:block/zircon_lamp_on"},
+        "lit=false": {"model": "ahh:block/zircon_lamp_off"}
+    }
+}
