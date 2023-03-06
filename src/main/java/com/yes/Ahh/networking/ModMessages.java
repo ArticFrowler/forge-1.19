@@ -2,6 +2,7 @@ package com.yes.Ahh.networking;
 
 import com.yes.Ahh.AhhModMain;
 import com.yes.Ahh.networking.packet.DrinkWaterC2SPacket;
+import com.yes.Ahh.networking.packet.EnergySyncS2CPacket;
 import com.yes.Ahh.networking.packet.ExampleC2SPacket;
 import com.yes.Ahh.networking.packet.ThirstDataSyncS2CPacket;
 import net.minecraft.resources.ResourceLocation;
@@ -48,6 +49,12 @@ public class ModMessages {
                 .consumerMainThread(ThirstDataSyncS2CPacket::handle)
                 .add();
 
+        net.messageBuilder(EnergySyncS2CPacket.class, id(), NetworkDirection.PLAY_TO_CLIENT)
+                .decoder(EnergySyncS2CPacket::new)
+                .encoder(EnergySyncS2CPacket::toBytes)
+                .consumerMainThread(EnergySyncS2CPacket::handle)
+                .add();
+
     }
 
     public static <MSG> void sendToServer(MSG message){
@@ -58,4 +65,7 @@ public class ModMessages {
         INSTANCE.send(PacketDistributor.PLAYER.with(() -> player), message);
     }
 
+    public static <MSG> void sendToClients(MSG message) {
+        INSTANCE.send(PacketDistributor.ALL.noArg(), message);
+    }
 }

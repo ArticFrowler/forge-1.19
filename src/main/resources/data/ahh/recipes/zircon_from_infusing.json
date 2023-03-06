@@ -1,0 +1,11 @@
+{
+  "type": "ahh:gem_infusing",
+  "ingredients": [
+    {
+      "item":"ahh:raw_zircon"
+    }
+  ],
+  "output": {
+    "item": "ahh:zircon"
+  }
+}

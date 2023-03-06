@@ -5,6 +5,8 @@ import com.yes.Ahh.Item.Custom.EightBallItem;
 
 import com.yes.Ahh.block.ModBlocks;
 import com.yes.Ahh.fluid.ModFluids;
+import com.yes.Ahh.materials.ModArmorMaterials;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -40,8 +42,17 @@ public class ModItems {
 
 	public static final RegistryObject<Item> COOL_SWORD = ITEMS.register("cool_sword",
 								//Tier, Attack Damage, Attack Speed
-			() -> new SwordItem(Tiers.DIAMOND, 10, 5,new Item.Properties().tab(ModCreativeModeTab.AHH_TAB).stacksTo(1)));
-	
+			() -> new SwordItem(Tiers.DIAMOND, 10, 5,
+					new Item.Properties().tab(ModCreativeModeTab.AHH_TAB).stacksTo(1)));
+
+	public static final RegistryObject<Item> ZIRCON_PICKAXE = ITEMS.register("zircon_pickaxe",
+			() -> new PickaxeItem(Tiers.DIAMOND,4,6 ,
+					new Item.Properties().tab(ModCreativeModeTab.AHH_TAB).stacksTo(1)));
+
+	public static final RegistryObject<Item> ZIRCON_HELMET = ITEMS.register("zircon_helmet", () ->
+			new ArmorItem(ModArmorMaterials.ZIRCON, EquipmentSlot.HEAD,
+					new Item.Properties().tab(ModCreativeModeTab.AHH_TAB).stacksTo(1)));
+
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);
 	}

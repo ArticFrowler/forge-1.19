@@ -7,6 +7,7 @@ import com.yes.Ahh.Item.ModCreativeModeTab;
 import com.yes.Ahh.Item.ModItems;
 
 import com.yes.Ahh.block.Custom.BlueberryCropBlock;
+import com.yes.Ahh.block.Custom.GemInfusingStation;
 import com.yes.Ahh.block.Custom.JumpyBlock;
 import com.yes.Ahh.block.Custom.ZirconLampBlock;
 import com.yes.Ahh.fluid.ModFluids;
@@ -56,6 +57,10 @@ public class ModBlocks {
 	public static final RegistryObject<Block> JUMPY_BLOCK = registerBlock("jumpy_block",
 			() -> new JumpyBlock(BlockBehaviour.Properties.of(Material.STONE)
 					.strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.AHH_TAB);
+
+	public static final RegistryObject<Block> GEM_INFUSING_STATION = registerBlock("gem_infusing_station",
+			() -> new GemInfusingStation(BlockBehaviour.Properties.of(Material.METAL)
+					.strength(6f).requiresCorrectToolForDrops().noOcclusion()), ModCreativeModeTab.AHH_TAB);
 
 	public static final RegistryObject<Block> ZIRCON_LAMP = registerBlock("zircon_lamp",
 			() -> new ZirconLampBlock(BlockBehaviour.Properties.of(Material.STONE)

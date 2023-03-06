@@ -1,0 +1,11 @@
+{
+  "type": "ahh:gem_infusing",
+  "ingredients": [
+    {
+      "item":"minecraft:emerald"
+    }
+  ],
+  "output": {
+    "item": "minecraft:diamond"
+  }
+}

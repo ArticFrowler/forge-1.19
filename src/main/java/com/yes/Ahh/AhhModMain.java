@@ -2,14 +2,20 @@ package com.yes.Ahh;
 
 import com.mojang.logging.LogUtils;
 import com.yes.Ahh.Item.ModItems;
+import com.yes.Ahh.Item.ModMetalItems;
 import com.yes.Ahh.block.ModBlocks;
 
+import com.yes.Ahh.block.entity.ModelBlockEntities;
 import com.yes.Ahh.fluid.ModFluidTypes;
 import com.yes.Ahh.fluid.ModFluids;
 import com.yes.Ahh.networking.ModMessages;
+import com.yes.Ahh.recipe.ModRecipes;
+import com.yes.Ahh.screen.GemInfusingStationScreen;
+import com.yes.Ahh.screen.ModMenuTypes;
 import com.yes.Ahh.villager.ModVillagers;
 import com.yes.Ahh.world.feature.ModConfiguredFeatures;
 import com.yes.Ahh.world.feature.ModPlacedFeatures;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.common.MinecraftForge;
@@ -33,12 +39,18 @@ public class AhhModMain
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         
         ModItems.register(modEventBus);
+        ModMetalItems.register(modEventBus);
+
         ModBlocks.register(modEventBus);
+        ModelBlockEntities.register(modEventBus);
 
         ModFluids.register(modEventBus);
         ModFluidTypes.register(modEventBus);
 
         ModVillagers.register(modEventBus);
+
+        ModMenuTypes.register(modEventBus);
+        ModRecipes.register(modEventBus);
 
         ModConfiguredFeatures.register(modEventBus);
         ModPlacedFeatures.register(modEventBus);
@@ -61,6 +73,8 @@ public class AhhModMain
         public static void onClientSetup(FMLClientSetupEvent event){
             ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_SOAP_WATER.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_SOAP_WATER.get(), RenderType.translucent());
+
+            MenuScreens.register(ModMenuTypes.GEM_INFUSING_STATION_MENU.get(), GemInfusingStationScreen::new);
         }
     }
 }
