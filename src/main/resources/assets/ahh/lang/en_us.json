@@ -17,6 +17,8 @@
     "block.ahh.blueberry_crop": "Blueberry Crop",
     "block.ahh.gem_infusing_station": "Gem Infusing Station",
 
+    "fluid_type.ahh.soap_water_fluid": "Soapy Water",
+
     "itemGroup.ahhtab": "Ahh Mod",
     "entity.minecraft.villager.ahh.jump_master": "Jumpy Master",
 
@@ -24,5 +26,8 @@
     "key.ahh.drink_water": "Drink Water",
 
     "message.ahh.drink_water": "Drinking water",
-    "message.ahh.no_water": "No water nearby!"
+    "message.ahh.no_water": "No water nearby!",
+
+    "ahhmod.tooltip.liquid.amount.with.capacity": "%s / %s mB",
+    "ahhmod.tooltip.liquid.amount": "%s mB"
 }

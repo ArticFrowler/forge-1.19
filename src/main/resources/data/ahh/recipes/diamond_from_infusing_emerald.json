@@ -5,6 +5,10 @@
       "item":"minecraft:emerald"
     }
   ],
+  "fluid": {
+    "FluidName": "minecraft:water",
+    "Amount": 500
+  },
   "output": {
     "item": "minecraft:diamond"
   }

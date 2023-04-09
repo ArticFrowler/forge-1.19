@@ -1,10 +1,7 @@
 package com.yes.Ahh.networking;
 
 import com.yes.Ahh.AhhModMain;
-import com.yes.Ahh.networking.packet.DrinkWaterC2SPacket;
-import com.yes.Ahh.networking.packet.EnergySyncS2CPacket;
-import com.yes.Ahh.networking.packet.ExampleC2SPacket;
-import com.yes.Ahh.networking.packet.ThirstDataSyncS2CPacket;
+import com.yes.Ahh.networking.packet.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.network.NetworkDirection;
@@ -53,6 +50,12 @@ public class ModMessages {
                 .decoder(EnergySyncS2CPacket::new)
                 .encoder(EnergySyncS2CPacket::toBytes)
                 .consumerMainThread(EnergySyncS2CPacket::handle)
+                .add();
+
+        net.messageBuilder(FluidSyncS2CPacket.class, id(), NetworkDirection.PLAY_TO_CLIENT)
+                .decoder(FluidSyncS2CPacket::new)
+                .encoder(FluidSyncS2CPacket::toBytes)
+                .consumerMainThread(FluidSyncS2CPacket::handle)
                 .add();
 
     }

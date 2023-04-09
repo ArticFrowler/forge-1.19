@@ -5,6 +5,10 @@
       "item":"ahh:raw_zircon"
     }
   ],
+  "fluid": {
+    "FluidName": "ahh:soap_water_fluid",
+    "Amount": 250
+  },
   "output": {
     "item": "ahh:zircon"
   }

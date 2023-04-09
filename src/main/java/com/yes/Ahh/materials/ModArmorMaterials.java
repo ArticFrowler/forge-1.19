@@ -1,9 +1,11 @@
 package com.yes.Ahh.materials;
 
+import com.yes.Ahh.AhhModMain;
 import com.yes.Ahh.Item.ModItems;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.LazyLoadedValue;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
@@ -13,7 +15,7 @@ import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
 
-    ZIRCON("zircon", 25, new int[]{3, 6, 8, 3}, 10, SoundEvents.ARMOR_EQUIP_IRON,
+    ZIRCON("zircon", 25, new int[]{3, 6, 8, 3}, 10, SoundEvents.ARMOR_EQUIP_CHAIN,
             1.0F, 0.0F, () -> Ingredient.of(new ItemStack(ModItems.ZIRCON.get()))
     );
 
@@ -59,7 +61,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
     }
 
     public String getName() {
-        return this.name;
+        return AhhModMain.MODID + ":" + this.name;
     }
 
     public float getToughness() {

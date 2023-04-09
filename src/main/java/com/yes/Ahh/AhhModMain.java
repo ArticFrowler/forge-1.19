@@ -2,7 +2,6 @@ package com.yes.Ahh;
 
 import com.mojang.logging.LogUtils;
 import com.yes.Ahh.Item.ModItems;
-import com.yes.Ahh.Item.ModMetalItems;
 import com.yes.Ahh.block.ModBlocks;
 
 import com.yes.Ahh.block.entity.ModelBlockEntities;
@@ -39,7 +38,6 @@ public class AhhModMain
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         
         ModItems.register(modEventBus);
-        ModMetalItems.register(modEventBus);
 
         ModBlocks.register(modEventBus);
         ModelBlockEntities.register(modEventBus);

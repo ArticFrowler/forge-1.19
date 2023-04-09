@@ -6,6 +6,7 @@ import com.yes.Ahh.Item.Custom.EightBallItem;
 import com.yes.Ahh.block.ModBlocks;
 import com.yes.Ahh.fluid.ModFluids;
 import com.yes.Ahh.materials.ModArmorMaterials;
+import com.yes.Ahh.materials.ModToolTiers;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
@@ -46,11 +47,23 @@ public class ModItems {
 					new Item.Properties().tab(ModCreativeModeTab.AHH_TAB).stacksTo(1)));
 
 	public static final RegistryObject<Item> ZIRCON_PICKAXE = ITEMS.register("zircon_pickaxe",
-			() -> new PickaxeItem(Tiers.DIAMOND,4,6 ,
+			() -> new PickaxeItem(ModToolTiers.ZIRCON,4,6 ,
 					new Item.Properties().tab(ModCreativeModeTab.AHH_TAB).stacksTo(1)));
 
 	public static final RegistryObject<Item> ZIRCON_HELMET = ITEMS.register("zircon_helmet", () ->
 			new ArmorItem(ModArmorMaterials.ZIRCON, EquipmentSlot.HEAD,
+					new Item.Properties().tab(ModCreativeModeTab.AHH_TAB).stacksTo(1)));
+
+	public static final RegistryObject<Item> ZIRCON_CHESTPLATE = ITEMS.register("zircon_chestplate", () ->
+			new ArmorItem(ModArmorMaterials.ZIRCON, EquipmentSlot.CHEST,
+					new Item.Properties().tab(ModCreativeModeTab.AHH_TAB).stacksTo(1)));
+
+	public static final RegistryObject<Item> ZIRCON_LEGGINGS = ITEMS.register("zircon_leggings", () ->
+			new ArmorItem(ModArmorMaterials.ZIRCON, EquipmentSlot.LEGS,
+					new Item.Properties().tab(ModCreativeModeTab.AHH_TAB).stacksTo(1)));
+
+	public static final RegistryObject<Item> ZIRCON_BOOTS = ITEMS.register("zircon_boots", () ->
+			new ArmorItem(ModArmorMaterials.ZIRCON, EquipmentSlot.FEET,
 					new Item.Properties().tab(ModCreativeModeTab.AHH_TAB).stacksTo(1)));
 
 	public static void register(IEventBus eventBus) {
